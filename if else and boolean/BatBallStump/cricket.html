@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+ 
+  //generate random no between 0 and 3
+  let random = Math.random()*3;
+  let compchoice ;
+  if(random > 0 && random <=1 ){
+    compchoice = 'Bat';
+  }else if(random > 1 && random <=2){
+     compchoice = 'Ball';
+  }else{
+     compchoice = 'Stump';
+  }
+
+  let resmsg;
+  if(compchoice === 'Ball'){
+   resmsg='so you won.';
+  }else if(compchoice === 'Bat'){
+    resmsg=`It's a tie`;
+  }else {
+   resmsg = 'so computer won';
+  }
+  
+  alert(`you have chosen Bat. Computer choice is ${compchoice} and  ${resmsg}`)
+  
+  ">Bat</button>
+
+  <button onclick="
+ 
+  //generate random no between 0 and 3
+   random = Math.random()*3;
+ 
+  if(random > 0 && random <=1 ){
+    compchoice = 'Bat';
+  }else if(random > 1 && random <=2){
+     compchoice = 'Ball';
+  }else{
+     compchoice = 'Stump';
+  }
+
+  
+  if(compchoice === 'Ball'){
+   resmsg=`It's a tie `;
+  }else if(compchoice === 'Bat'){
+    resmsg=`'so computer won'`;
+  }else {
+   resmsg = 'so you won';
+  }
+  
+  alert(`you have chosen Ball. Computer choice is ${compchoice} and  ${resmsg}`)
+  
+  ">Ball</button>
+
+
+  <button onclick="
+ 
+  //generate random no between 0 and 3
+   random = Math.random()*3;
+ 
+  if(random > 0 && random <=1 ){
+    compchoice = 'Bat';
+  }else if(random > 1 && random <=2){
+     compchoice = 'Ball';
+  }else{
+     compchoice = 'Stump';
+  }
+
+  
+  if(compchoice === 'Ball'){
+   resmsg=`so computer won`;
+  }else if(compchoice === 'Bat'){
+    resmsg='so you won';
+  }else {
+   resmsg = `It's a tie`;
+  }
+  
+  alert(`you have chosen Stump. Computer choice is ${compchoice} and  ${resmsg}`) ">Stump</button>
+</body>
+</html>

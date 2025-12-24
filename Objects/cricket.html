@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+  let compchoice = generateCompChoice();
+  let resmsg = getResult('Bat',compchoice);
+  showResult('Bat',compchoice,resmsg);
+  ">Bat</button>
+
+  <button onclick="
+  compchoice=generateCompChoice();
+  resmsg = getResult('Ball',compchoice);
+  showResult('Ball',compchoice,resmsg);
+  ">Ball</button>
+
+
+  <button onclick="
+  compchoice=generateCompChoice();
+  resmsg = getResult('Stump',compchoice);
+  showResult('Stump',compchoice,resmsg);
+  ">Stump</button>
+
+
+  <script>
+
+  let score = {
+    win : 0,
+    lost : 0,
+    tie : 0,
+  };
+
+
+   function generateCompChoice(){
+    //generate random no between 0 and 3
+    let random = Math.random()*3;
+    if(random > 0 && random <=1 ){
+     return 'Bat';
+    }else if(random > 1 && random <=2){
+     return 'Ball';
+    }else{
+     return 'Stump';
+    }
+   }
+
+   function getResult(userMove,compMove){
+    if(userMove == 'Bat'){
+      if(compMove === 'Ball'){
+        score.win ++;
+      return 'so you won.';
+      }else if(compMove === 'Bat'){
+        score.tie++;
+      return `It's a tie`;
+      }else if(compMove == 'Stump'){
+        score.lost++;
+      return 'so computer won';
+     }
+    }else if(userMove == 'Ball'){
+        if(compMove === 'Ball'){
+          score.tie++;
+        return `It's a tie `;
+        }else if(compMove === 'Bat'){
+           score.lost++;
+        return `'so computer won'`;
+        }else if(compMove == 'Stump') {
+           score.win ++;
+        return  'so you won';
+      }
+    }else{
+       if(compMove === 'Ball'){
+         score.lost++;
+       return `so computer won`;
+       }else if(compMove === 'Bat'){
+         score.win ++;
+       return 'so you won';
+       }else if(compMove == 'Stump'){
+        score.tie++;
+       return `It's a tie`;
+      }
+    }
+   }
+
+   function showResult(userMove,compMove,result){
+    // console.log(score)
+     alert(`you have chosen ${userMove}. Computer choice is ${compMove} 
+      result is : ${result}   
+      won: ${score.win},
+      lost:${score.lost},
+      tie: ${score.tie} `);
+   }
+
+
+
+  </script>
+</body>
+</html>

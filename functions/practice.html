@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice exercise</title>
+</head>
+<body>
+  
+  <script>
+
+    function isodd(n){
+     let rem = n%2;
+     let isodd = rem == 1;
+     return isodd;
+    }
+    //  console.log(isodd(4));
+    //  console.log(isodd(5));
+   
+    function larger(n1,n2){
+      // if(n1 > n2)return n1;
+      // else return {n2} ;
+     return n1>n2?n1:n2;
+    }
+    // console.log(larger(4,5));
+
+    function celToFarn(c){
+      let f = (9/5)*c+32;
+      return f;
+    }
+
+    console.log(celToFarn(0));
+    console.log(celToFarn(100));
+    console.log(celToFarn(32));
+  </script>
+</body>
+</html>

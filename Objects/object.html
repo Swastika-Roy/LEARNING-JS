@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+
+    // let product = {
+    //   company : 'Mango',
+    //   price : 861,
+    //   "item-name" : 'T_shirt',
+    // };
+
+    // console.log(typeof(product))
+    // console.log(product)
+    // console.log(product.company)
+    // console.log(product.item_name)
+    // console.log(product.price)
+    // product.price = 800
+    // console.log(product.price)
+
+    // let propertyName = "item-name";
+    // console.log(product['item-name'])
+    // console.log(product[propertyName]);
+
+    // console.log(product);
+    // // delete product.company;
+    // delete product['company'];
+    // console.log(product);
+
+    // let product = {
+    //   company : "Mango",
+    //   price : 861,
+    //   rating : {
+    //      stars : 4.5,
+    //      noOfReviews : 87
+    //   },
+    //   'item-name' : 'T-shirt',
+    //   displayPrice : function(){
+    //     console.log(`price of product is Rs ${this.price}`)
+    //   }
+    // }
+    // product.displayPrice();
+    // console.log(product.rating)
+
+    //AutoBoxing - automatic conversion of primitives to objects
+      // console.log("This is a Book".length)
+      // console.log('I am hero'.toUpperCase())
+      // console.log("I am hero .".replace('hero','heroine'));
+    
+    // let a = 5
+    // let b = a
+    // console.log(`a = ${a}, b = ${b} `)  
+    // a = 8
+    // console.log(`a = ${a}, b = ${b} `) 
+
+
+    // let x = {num : 5}
+    // let y = x;
+    // console.log(`x = ${x.num}, y = ${y.num} `) 
+    // x.num = 8;
+    // console.log(`x = ${x.num}, y = ${y.num} `)
+    
+    let p = {pop:'uno'}
+    let q = {pop:'uno'}
+    console.log(p==q) // == and === compares references of objects so it returns p==q as false because reference id is different.
+    console.log(p===q)
+
+  </script>
+</body>
+</html>
