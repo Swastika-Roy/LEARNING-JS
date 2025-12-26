@@ -29,18 +29,26 @@
   showResult('Stump',compchoice,resmsg);
   ">Stump</button>
 
+   <button onclick="localStorage.clear() 
+   resetScore(scoreStr)">
+    Reset
+   </button>   
 
   <script>
-
-  let score = {
+let scoreStr = localStorage.getItem('Score');
+resetScore(scoreStr)
+function resetScore(){
+ score = scoreStr ? JSON.parse(scoreStr) : {
     win : 0,
     lost : 0,
     tie : 0,
-    displayScore(){
+};  
+}
+
+
+  score.displayScore =  function(){
       return `won : ${score.win} , lost : ${score.lost} , tie : ${score.tie}`
     }
-  };
-
 
    function generateCompChoice(){
     //generate random no between 0 and 3
@@ -92,7 +100,7 @@
    }
 
    function showResult(userMove,compMove,result){
-    // console.log(score)
+    localStorage.setItem('Score',JSON.stringify(score))
      alert(`you have chosen ${userMove}. Computer choice is ${compMove} 
       result : ${result}   
       ${score.displayScore()}`);

@@ -40,7 +40,7 @@
     //   },
     //   'item-name' : 'T-shirt',
     //   displayPrice : function(){
-    //     console.log(`price of product is Rs ${this.price}`)
+    //     console.log(`price of product is Rs ${product.price}`)
     //   }
     // }
     // product.displayPrice();
@@ -64,11 +64,30 @@
     // x.num = 8;
     // console.log(`x = ${x.num}, y = ${y.num} `)
     
-    let p = {pop:'uno'}
-    let q = {pop:'uno'}
-    console.log(p==q) // == and === compares references of objects so it returns p==q as false because reference id is different.
-    console.log(p===q)
+    // let p = {pop:'uno'}
+    // let q = {pop:'uno'}
+    // console.log(p==q) // == and === compares references of objects so it returns p==q as false because reference id is different.
+    // console.log(p===q)
 
+    let product = {
+      company : 'Mango',
+      price : 861,
+      rating : {
+        stars : 4.5,
+        views : 100
+      },
+      'item-name' : 'T-shirt',
+      display(){
+      console.log(`price is Rs ${this.price}`)},
+      displayPrice : function(){
+        console.log(`price of product is Rs ${this.price}`)
+      }}
+    
+
+    // let {company,price}= product;//destructuring
+    // console.log(company)
+    // console.log(price)
+    product.display()
   </script>
 </body>
 </html>
