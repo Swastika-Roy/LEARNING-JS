@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #mybutton{
+      height:50px;
+      width : 50px;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+    }
+    .odd{
+      background-color: chocolate;
+    }
+    .even{
+      background-color: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <h3 id="greeting"></h3>
+  <button id="mybutton" onclick="buttonPressed()">
+    0 </button>
+  <script>
+    let noofclicked = localStorage.getItem('noofclicked') || 0;
+    function buttonPressed(){
+      noofclicked++;
+      localStorage.setItem('noofclicked',noofclicked)
+      update();
+    }
+
+    function update(){
+let button = document.querySelector('#mybutton');
+    if(noofclicked % 2 == 0){
+        button.classList.remove('odd')
+         button.classList.add('even')
+    }else{
+        button.classList.remove('even')
+        button.classList.add('odd')
+    }
+      button.innerText=noofclicked;
+    }
+
+    update();
+
+    function doGrreting(name='Dear'){
+    let date = new Date();
+    let hr = date.getHours();
+    let heading = document.querySelector('#greeting');
+    console.log(hr);
+    if(hr > 5 && hr < 12){
+      heading.innerText= `Good Morning${name}`;
+    }else if(hr > 12 && hr < 18){
+     heading.innerText=`Good Evening ${name}`;
+    }else{
+      heading.innerText=`good night ${name}`;
+    }
+  }
+  
+    doGrreting("titu");
+  </script>
+</body>
+</html>
