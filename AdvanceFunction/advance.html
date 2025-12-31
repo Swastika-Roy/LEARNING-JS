@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance</title>
+</head>
+<body>
+
+  <button id="my-button">
+    click Me
+  </button>
+
+  <script>
+
+let arr = [1,2,3,4,5];
+let sq = arr.map(
+    num => num * num
+);
+console.log(sq)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let arr = [1,2,3,4,5,6,7,8,9];
+// let odds = arr.filter((num,index) => {
+//            if(num % 2 === 1) return true;
+//            else return false;
+//           }
+//         )
+
+// let newOdds = arr.filter(
+//     (num,index) => num % 2 === 1
+// );    
+
+// let evens = arr.filter((num,index) => {
+//            if(num % 2 === 0) return true;
+//            else return false;
+//           }
+//         )  
+
+// console.log(newOdds)
+// console.log(evens)
+
+
+// let buttonEle = document.querySelector('#my-button');
+// let behaviour = event => console.log('I am clicked');
+// buttonEle.addEventListener('click',behaviour);
+
+// let printdate = event => console.log(new Date());
+// buttonEle.addEventListener('click',printdate);
+// buttonEle.removeEventListener('click',behaviour);
+
+
+
+
+// let sum = function(n1,n2){
+//    return n1+n2;
+// }
+// let newsum = sum;
+// // console.log(sum(4,5))
+// // console.log(newsum(4,5))
+
+// //(4+5)+7
+// let threesum = function(n1,n2,n3,twosum){
+//     let sum1 = twosum(n1,n2);
+//     return twosum(sum1,n3);
+// }
+
+// console.log(threesum(1,2,3,sum))
+
+// console.log(threesum)
+// console.log(typeof threesum)
+
+// setTieomut(() => console.log("good morning,wake up"),2000) // 2000 milisec = 2sec
+
+// console.log("alarm set.")
+
+// let alarm = () => console.log(` good morning,
+// ${new Date()}`
+// );
+
+// // let timerId = setTimeout(alarm,2000);
+// // // console.log(`alarm set with timerId = ${timerId}`)
+// //  clearTimeout(timerId)
+
+// let id = setInterval(alarm,1000);
+// setTimeout(() => clearInterval(id),4000)
+// ;
+
+
+</script>
+</body>
+</html>
